@@ -1,13 +1,35 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "./normal.css";
 
 function App() {
   return (
     <div className="App">
       <asside className="sidemenu">
-        <h1>Asside</h1>
+        <div className="side-menu-button">
+          <span>+</span>
+          New Chat
+        </div>
       </asside>
-      <section className="chatbox"></section>
+      <section className="chatbox">
+        <div className="chat-log">
+          <div className="chat-message ">
+            <div className="chat-message-center">
+              <div className="avatar"></div>
+              <div className="message">Hello World</div>
+            </div>
+          </div>
+          <div className="chat-message chatgpt">
+            <div className="chat-message-center">
+              <div className="avatar chatgpt"></div>
+              <div className="message">I am an AI</div>
+            </div>
+          </div>
+        </div>
+        <div className="chat-input-holder">
+          <textarea rows="1" className="chat-input-textarea"></textarea>
+        </div>
+      </section>
     </div>
   );
 }
